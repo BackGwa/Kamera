@@ -3,9 +3,12 @@ function init() {
         return;
     }
     
-    navigator.mediaDevices.getUserMedia({video:true})
-        .then(camera_init)
-        .catch(camera_init_failed);
+    navigator.mediaDevices.getUserMedia({
+        audio: false,
+        video: { facingMode: { exact : "environment" } }
+    })
+    .then(camera_init)
+    .catch(camera_init_failed);
 }
 
 window.onload = () => {
