@@ -5,5 +5,5 @@ function camera_init(stream) {
 }
 
 function camera_init_failed(error) {
-    console.error(error);
+    alert(error);
 }

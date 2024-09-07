@@ -5,7 +5,7 @@ function init() {
     
     navigator.mediaDevices.getUserMedia({video:true})
         .then(camera_init)
-        .catch(camInitFailed);
+        .catch(camera_init_failed);
 }
 
 window.onload = () => {
