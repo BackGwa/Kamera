@@ -49,3 +49,10 @@
     border: 1px solid var(--button-border);
     border-radius: calc(3.5rem / 2);
 }
+
+.menu-button img {
+    position: absolute;
+    width: 3rem;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
