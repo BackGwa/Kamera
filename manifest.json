@@ -1,0 +1,16 @@
+{
+    "name": "Kamera",
+    "short_name": "Kamera",
+    "description": "Retro iPhone Camera",
+    "icons": [
+        {
+            "src": "icons/icon-512.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ],
+    "start_url": "index.html",
+    "display": "fullscreen",
+    "theme_color": "#000000",
+    "background_color": "#000000"
+}
