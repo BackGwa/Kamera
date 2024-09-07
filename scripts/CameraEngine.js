@@ -18,15 +18,16 @@ function capture() {
     let context = canvas.getContext('2d');
     context.drawImage(viewport, 0, 0, canvas.width, canvas.height);
 
+    PlayAudio("res/shutter.mp3");
     download(canvas);
 }
 
 function download(canvas) {
     let image = canvas.toDataURL('image/png');
     let link = document.createElement('a');
+
     let filename = `kamera_${now.getFullYear()}-${(now.getMonth() + 1).toString().padStart(2, '0')}-${now.getDate().toString().padStart(2, '0')}_` +
         `${now.getHours().toString().padStart(2, '0')}-${now.getMinutes().toString().padStart(2, '0')}-${now.getSeconds().toString().padStart(2, '0')}.png`;
-
     link.href = image;
     link.download = filename;
     link.click();
