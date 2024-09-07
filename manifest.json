@@ -4,7 +4,7 @@
     "description": "Retro iPhone Camera",
     "icons": [
         {
-            "src": "icons/icon-512.png",
+            "src": "res/icon.png",
             "sizes": "512x512",
             "type": "image/png"
         }
