@@ -19,7 +19,10 @@ function capture() {
     context.drawImage(viewport, 0, 0, canvas.width, canvas.height);
 
     PlayAudio("res/shutter.mp3");
-    download(canvas);
+
+    setTimeout(() => {
+        download(canvas);
+    }, 750);
 }
 
 function download(canvas) {
