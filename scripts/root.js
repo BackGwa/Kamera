@@ -6,8 +6,8 @@ function init() {
     navigator.mediaDevices.getUserMedia({
         audio: false,
         video: {
-            width: { ideal: 1920 },
-            height: { ideal: 1440 },
+            width: { ideal: 1440 },
+            height: { ideal: 1920 },
             facingMode: { exact: "environment" }
         }
     })
@@ -17,8 +17,8 @@ function init() {
             navigator.mediaDevices.getUserMedia({
                 audio: false,
                 video: {
-                    width: { ideal: 1920 },
-                    height: { ideal: 1440 },
+                    width: { ideal: 1440 },
+                    height: { ideal: 1920 },
                     facingMode: "user"
                 }
             })

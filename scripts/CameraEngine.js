@@ -9,20 +9,18 @@ function camera_init_failed(error) {
 }
 
 function capture() {
-    let canvas = document.createElement('canvas');
-    let viewport = document.querySelector(".viewport-camera");
+    let viewport = document.querySelector(".viewport");
 
-    canvas.width = viewport.videoWidth;
-    canvas.height = viewport.videoHeight;
-
-    let context = canvas.getContext('2d');
-    context.drawImage(viewport, 0, 0, canvas.width, canvas.height);
+    html2canvas(viewport, {
+        scale: 3
+    }).then((canvas) => {
+            setTimeout(() => {
+                download(canvas);
+            }, 500);
+        }
+    )
 
     PlayAudio("res/shutter.mp3");
-
-    setTimeout(() => {
-        download(canvas);
-    }, 750);
 }
 
 function download(canvas) {
